@@ -1,0 +1,10 @@
+﻿.action {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+::deep .mud-checkbox {
+    margin-left: -1rem;
+}
+}

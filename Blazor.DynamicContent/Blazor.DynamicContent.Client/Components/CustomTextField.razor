@@ -1,0 +1,21 @@
+﻿@inherits InputBase<string>
+
+@*<div style="display: flex; flex-direction: column;">
+    <span>@DisplayName</span>
+    <input value="@CurrentValue" required="@Required"
+    @onchange="@((ChangeEventArgs e) => OnValueChanged(e.Value))" />
+    @if (_showErrorMessage)
+    {
+    <span style="font-size: 0.8rem; color: red">@ErrorMessage</span>
+    }
+    </div>*@
+
+<div class="form__group field">
+    <input value="@CurrentValue" @onchange="@((ChangeEventArgs e) => OnValueChanged(e.Value))" 
+           required="@Required" class="form__field" placeholder="@DisplayName" name="name" id='name' />
+    <label for="name" class="form__label">@(Required ? $"{DisplayName}*" : DisplayName)</label>
+    @if (_showErrorMessage)
+    {
+        <span style="font-size: 0.8rem; color: red">@ErrorMessage</span>
+    }
+</div>

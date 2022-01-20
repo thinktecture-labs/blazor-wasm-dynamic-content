@@ -1,0 +1,27 @@
+﻿@inherits LayoutComponentBase
+
+<MudThemeProvider IsDarkMode="_isDarkMode" Theme="_theme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar>
+        <MudIconButton Icon="@Icons.Material.Filled.Menu" Color="Color.Inherit" Edge="Edge.Start" OnClick="@((e) => DrawerToggle())" />
+        <MudText Typo="Typo.overline">Blazor Hosting Sample with MudBlazor</MudText>
+        <MudSpacer />
+        <MudToggleIconButton Icon="@Icons.Filled.WbSunny" ToggledIcon="@Icons.Filled.ShieldMoon" @bind-Toggled="_isDarkMode"></MudToggleIconButton>
+    </MudAppBar>
+    <MudDrawer @bind-Open="@_drawerOpen" Variant="DrawerVariant.Mini" ClipMode="DrawerClipMode.Always">
+        <MudNavMenu Color="@Color.Secondary" Bordered="true">
+            <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Filled.Dashboard">Dashboard</MudNavLink>
+            <MudNavLink Href="/dynamic-component" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.DynamicFeed">Dynamic Component</MudNavLink>
+            <MudNavLink Href="/render-fragment" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.DynamicForm">Render Fragment</MudNavLink>
+            <MudNavLink Href="/dynamic-switch" Match="NavLinkMatch.Prefix" Icon="@Icons.Material.Filled.Cameraswitch">Dynamic Switch</MudNavLink>
+        </MudNavMenu>
+    </MudDrawer>
+    <MudMainContent>
+        <MudContainer Class="pa-16">
+            @Body
+        </MudContainer>
+    </MudMainContent>
+</MudLayout>

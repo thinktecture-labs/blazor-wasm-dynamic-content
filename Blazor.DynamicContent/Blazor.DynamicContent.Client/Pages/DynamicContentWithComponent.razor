@@ -1,0 +1,22 @@
+﻿@page "/dynamic-component"
+
+<PageTitle>DynamicComponent</PageTitle>
+
+<MudAlert Class="mb-4" Severity="Severity.Info">This section will continued soon.</MudAlert>
+
+<MudCard>
+    <MudCardContent>
+        @if (_root?.Components.Count > 0)
+        {
+            <EditForm Model="@_root">
+                @foreach (var component in _root.Components)
+                {
+                    <DynamicComponent @key="component.Id" Type="component.ComponentType" Parameters="component.Parameters" />
+                }
+            </EditForm>
+        }
+    </MudCardContent>
+</MudCard>
+
+
+

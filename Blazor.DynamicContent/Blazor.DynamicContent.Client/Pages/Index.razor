@@ -1,0 +1,46 @@
+﻿@page "/"
+
+<PageTitle>Übersicht Dynamic Content</PageTitle>
+
+<MudGrid Spacing="3" Justify="Justify.Center">
+    <MudItem>
+        <MudPaper Height="180px" Width="250px">
+            <MudCard Elevation="0" Class="pa-0">
+                <MudCardContent>
+                    <MudText>DynamicComponent</MudText>
+                    <MudText Typo="Typo.body2">Dynamischer Inhalt mit Hilfe der DynamicComponent aus .NET 6</MudText>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="@(() => NavigateTo("dynamic-component"))">Learn More</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudPaper>
+    </MudItem>
+
+    <MudItem>
+        <MudPaper Height="180px" Width="250px">
+            <MudCard Elevation="0" Class="pa-0">
+                <MudCardContent>
+                    <MudText>RenderFragment</MudText>
+                    <MudText Typo="Typo.body2">Dynamischer Inhalt mit Hilfe der von RenderFragments.</MudText>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="@(() => NavigateTo("render-fragment"))">Learn More</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudPaper>
+    </MudItem>
+    <MudItem>
+        <MudPaper Height="180px" Width="250px">
+            <MudCard Elevation="0" Class="pa-0">
+                <MudCardContent>
+                    <MudText>Story of the day</MudText>
+                    <MudText Typo="Typo.body2">Dynamischer Inhalt mit Hilfe der von eigenen Componenten und einer Switch-Case Anweisung.</MudText>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton Variant="Variant.Text" Color="Color.Primary" OnClick="@(() => NavigateTo("dynamic-switch"))">Learn More</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudPaper>
+    </MudItem>
+</MudGrid>

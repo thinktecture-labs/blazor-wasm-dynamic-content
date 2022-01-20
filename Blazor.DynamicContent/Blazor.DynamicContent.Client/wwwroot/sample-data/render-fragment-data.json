@@ -1,0 +1,41 @@
+[
+  {
+    "id": "ab7ac8dc-a7a7-4944-a612-ac4bcef33a5a",
+    "sectionName": "Section one",
+    "components": [
+      {
+        "id": "587867b3-0d2a-4609-b74c-52bc9c3ebd3b",
+        "componentType": "checkbox",
+        "label": "Custom checkbox"
+      },
+      {
+        "id": "e157e4ee-2929-43ca-ad0f-1c251d5d528e",
+        "componentType": "textbox",
+        "label": "CustomTextField Component",
+        "emptyText": "Enter a value",
+        "errorText": "You must enter a value",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "8ea4a1af-43fb-4040-90c2-2a2d3afe2d5d",
+    "sectionName": "Section Two",
+    "components": [
+      {
+        "id": "4fd30143-24b5-4482-8908-5171f0669ca6",
+        "componentType": "checkbox",
+        "label": "Custom checkbox"
+      },
+      {
+        "id": "041b97d1-d484-4f5d-8339-68bba12433c6",
+        "componentType": "textbox",
+        "label": "Textbox section 2",
+        "emptyText": "Enter a value",
+        "errorText": "You must enter a value",
+        "required": true
+      }
+    ]
+
+  }
+]

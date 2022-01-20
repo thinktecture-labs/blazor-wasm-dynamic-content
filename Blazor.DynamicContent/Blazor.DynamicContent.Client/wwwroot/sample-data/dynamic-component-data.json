@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "component": "CustomCheckbox",
+    "parameters": {
+      "label": "Custom checkbox",
+      "checked": true,
+      "required":  true
+    }
+  },
+  {
+    "id": 2,
+    "component": "CustomTextbox",
+    "parameters": {
+      "label": "Custom textbox",
+      "value": "Text value 1",
+      "emptyText": "Enter a value",
+      "errorText": "You must enter a value",
+      "required": true
+    }
+  }
+]

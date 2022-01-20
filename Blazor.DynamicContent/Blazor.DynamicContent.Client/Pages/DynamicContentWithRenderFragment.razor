@@ -1,0 +1,25 @@
+﻿@page "/render-fragment"
+
+<PageTitle>RenderFragment</PageTitle>
+
+@if (_sections.Length > 0)
+{
+    <MudTabs Elevation="4">
+        <MudTabPanel Text="Dynamic Content with Design Framework MudBlazor">
+            <MudForm @ref="_mudForm" Model="@model">
+                @CreateFormWithMudBlazor()
+            </MudForm>
+            <div class="action">
+                <MudFab Icon="@Icons.Material.Filled.Save" Color="Color.Secondary" IconSize="Size.Medium" OnClick="SubmitMudBlazorData"></MudFab>
+            </div>
+        </MudTabPanel>
+        <MudTabPanel Text="Dynamic Content with Plain HTML">
+            <EditForm @ref="_form" Model="@model">
+                @CreateFormWithHtml()
+            </EditForm>
+            <div class="action">
+                <MudFab Icon="@Icons.Material.Filled.Save" Color="Color.Secondary" IconSize="Size.Medium" OnClick="SubmitBlazorData"></MudFab>
+            </div>
+        </MudTabPanel>
+    </MudTabs>
+}
