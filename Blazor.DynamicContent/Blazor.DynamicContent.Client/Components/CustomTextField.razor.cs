@@ -24,9 +24,11 @@ namespace Blazor.DynamicContent.Client.Components
             }
 
             _messageStore = new ValidationMessageStore(CurrentEditContext);
+
+            // Add here custom validation for the current input textfield
             CurrentEditContext.OnValidationRequested += (s, e) =>
             {
-                if (_messageStore != null && String.IsNullOrWhiteSpace(Value))
+                if (_messageStore != null && Required && String.IsNullOrWhiteSpace(Value))
                 {
                     _showErrorMessage = true;
                     _messageStore.Add(CurrentEditContext.Field(Id), ErrorMessage);
